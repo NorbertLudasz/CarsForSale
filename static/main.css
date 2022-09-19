@@ -1,0 +1,23 @@
+body {
+  background-color: teal;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 10px;
+}/*eddigiek szemi/lab1bol*/
+
+.submit, .submit2, .submit3{
+  padding: 1em;
+  margin: 10px 0 10px 0;
+}

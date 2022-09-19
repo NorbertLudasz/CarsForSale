@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/headallads.ejs', { title: 'Autokereskedes' }) %>
+</head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <p>Filter</p>
+    <form name="searchform" action="/searchAuto" method="POST" >
+      <label for="markasearch">Brand:</label><input name="markasearch" id="markasearch" type="text" pattern="[a-zA-Z]*" required>
+      <label for="varossearch">City:</label><input name="varossearch" id="varossearch" type="text" pattern="[a-zA-Z]*" required>
+      <label for="minar">Min Price:</label><input name="minar" id="minar" type="number" required>
+      <label for="maxar">Max Price:</label><input name="maxar" id="maxar" type="number" required>
+      <input type="submit" value="Filter" id="submit3">
+    </form>
+    <h1>Cars for Sale</h1>
+    <% if (hirdetesek.length) { %>
+      <table>
+        <tr><th>Brand</th><th>City</th><th>Price</th><div id="divdatehjq"></div><th>Details</th></tr>
+        <% hirdetesek.forEach((hirdetes) => { %>
+          <div id="divrowjq"><tr id="rowjq" onclick="getMessage(<%= hirdetes.id %>)"></div>
+            <td id="markajq"><%= hirdetes.marka %></td>
+            <td id="varosjq"><code><%= hirdetes.varos %></code></td>
+            <td id="arjq"><%= hirdetes.ar %></td>
+            <td><a href = "/ads/<%= hirdetes.id %>">More</a></td>
+          </tr>
+        <% }) %>
+      </table>
+    <% } else { %>
+      <p class="message">No ads to show</p>
+    <% } %>
+
+    <h2>Details of selected row</h2>
+    <div class="elrejtett" id="elrejtett"></div>
+
+  </body>
+</html>

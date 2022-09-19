@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>User Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body onload="startup()">
+    <nav>
+        <a href="#">Form</a>
+    </nav>
+    <form name = "myform" action="#" method="post">
+        <label for="csaladnev">Csaladnev:</label><input name="csaladnev" id="csaladnev" type="text" pattern="[A-Z]+[a-zA-Z]*" onblur="submitcheckCS()">
+        <label for="keresztnev">Keresztnev:</label><input name="keresztnev" id="keresztnev" type="text" pattern="[A-Z]+[a-zA-Z]*" onblur="submitcheckK()">
+        <label for="bday">Szuletesi datum:</label><input name="bday" id="bday" type="date" onblur="submitcheck()">
+        <label for="emailinput"></label><input type="email" name="emailinput" id="emailinput" required onblur="validemail()">
+        <label for="favpage">Kedvenc weboldal:</label><input name="favpage" id="favpage" type="url" onblur="validfavpage()">
+        <br/><input type="submit" value="toltsd fel" id="submit" disabled class="submit">
+        <label for="movecar">Auto iranyitas</label>
+        <select name="movecar" id="movecar">
+            <option value="elore">Elore</option>
+            <option value="hatra">Hatra</option>
+            <option value="balra">Balra</option>
+            <option value="jobbra">Jobbra</option>
+
+        </select>
+        <label for="carinput">Mozgasszam vagy forgasszog</label><input name="carinput" id="carinput" type="text">
+    </form>
+    <p><button onclick="canvasDefault()">Alaphelyzet</button></p>
+    <p><button onclick="movecarjs()">Mozgas/forgatas</button></p>
+
+    <p id="errortext"></p>
+
+    <img id="bronyabike" class="carcss" src="bronyabike.png" alt="car image">
+
+    
+
+    <canvas id="mycanvas" class="canvascss"></canvas>
+
+    <div id="footerdiv" class="footercss">
+        <footer>
+            <div id="footerdiv2">
+                <p id="footerp" class="footertext"></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

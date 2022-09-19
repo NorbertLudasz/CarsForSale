@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head.ejs', { title: 'Autokereskedes' }) %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <% if(hirdetesMarka.length) { %>
+
+    <form name = "myform1" action="./submitAuto" method="POST">
+      <p>Selling Form</p>
+      <label>Brand</label>
+      <select name="marka" id="marka">
+      <% hirdetesMarka.forEach((hirdMarka)=> { %>
+        <option value="<%= hirdMarka %>"> <%= hirdMarka %></option>
+        <% }) %>
+      </select>
+      <label>City</label>
+      <select name="varos" id="varos">
+        <% hirdetesVaros.forEach((hirdVaros)=> { %>
+          <option value="<%= hirdVaros %>"> <%= hirdVaros %></option>
+          <% }) %> 
+      </select>
+      <label for="ar">Price:</label><input name="ar" id="ar" type="number" required>
+      <label for="datum">Date:</label><input name="datum" id="datum" type="date" required>
+      <input type="submit" value="Post" id="submit">
+    </form>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    background-color: teal;
+}
+nav>a {
+    border: 1px black solid;
+    background-color: blue;
+    color: antiquewhite;
+    padding: 1em;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+nav {
+    margin-bottom: 40px;
+}
+
+nav>a:hover {
+    background-color: aqua;
+    color: brown;
+}
+
+label {
+    display: block;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    display: inline-block;
+    padding: 1em;
+    border-radius: 10px;
+}/*eddigiek szemi/lab1bol*/
+
+form {
+    text-align: center;
+}
+
+.submit {
+    padding: 1em;
+    margin: 10px 0 10px 0;
+}
+
+.footercss{
+    text-align:center;
+}
+
+.footertext{
+    text-align:center;
+}
+
+.canvascss{
+    background:black;
+    width: 600px;/*"600"*/
+    height: 600px;
+    border:1px white solid;
+    padding: 0;
+    display: block;
+}
+
+.carcss{
+    display: block;
+    width: 200px; 
+    height: 200px;
+    margin: auto;
+    display: none
+}

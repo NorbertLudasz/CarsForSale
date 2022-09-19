@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head.ejs', { title: 'Autokereskedes' }) %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <form name = "myform1" action="./loginUser" method="POST">
+      <p>Login</p>
+      <label for="nev">Username:</label><input name="nev" id="nev" type="text" required>
+      <label for="jelszo">Password:</label><input name="jelszo" id="jelszo" type="password" required>
+      <input type="submit" value="Login" id="submit">
+    </form>
+
+  </body>
+</html>

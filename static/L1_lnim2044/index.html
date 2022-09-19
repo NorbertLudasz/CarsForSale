@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Uditok</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+
+<body>
+    <!--Oldjuk meg media query használatával, hogy amennyiben a képernyő szélessége kisebb mint 600
+    pixel, az oldal háttérszíne változzon meg. cssben implementalva-->
+    <h1>Uditok</h1>
+    <nav>
+        <a href="#">Main</a>
+        <a href="cola.html">Cola</a>
+        <a href="sprite.html">Sprite</a>
+        <a href="fanta.html">Fanta</a>
+        <a href="https://en.wikipedia.org/wiki/Soft_drink">Udito wiki</a>
+        <a href="#footer">Lap alja</a>
+        <!--Definiáljunk egy link típust, melynek más és más a színe és szövegdíszítése ha rámegyünk az egérrel,
+        ha aktív, ha már meglátogattuk. cssben implementalva-->
+    </nav>
+    <div id="content">
+        <!--/* Elemre vonatkozó szelektorok (osztály/ID nélkül) segítségével oldjuk meg, hogy a főcím illetve alcím
+        (h1 és h2) színe, betűmérete, betű-stílusa (normál, dőlt, stb.) legyen egyforma */ nalam ez a h2 es h3-->
+        <article>
+            <div class="colatitle">
+                <h2>Coca-cola</h2>
+            </div>
+            <div class="colasubtitle">
+                <h3>The most popular soda worldwide</h3>
+            </div>
+            <!--<div class = colatext>-->
+                <section>
+                    <h4>About cola</h4>
+                    <!--Definiáljunk (és használjunk a HTML oldalon) két különböző stílusú paragrafus-t (p). Használjunk
+                        csak az illető elemre vonatkozó stílusosztályokat (class). Itt es ugyanigy a spritetext es fantatextnel-->
+                    <p class="colatext">Coca-Cola, or Coke, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century by John Stith Pemberton in Atlanta, Georgia.</p>
+                </section>
+            <!--</div>-->
+        </article>
+
+        <article>
+            <div class="spritetitle">
+                <h2>Sprite</h2>
+            </div>
+            <div class="spritesubtitle">
+                <h3>It's not actually green, that's just the bottle</h3>
+            </div>
+            <!--<div class = spritetext>-->
+                <section>
+                    <h4>About sprite</h4>
+                    <p class="spritetext">Sprite is a colorless, lemon and lime-flavored soft drink created by The Coca-Cola Company. It was first developed in West Germany in 1959 as Fanta Klare Zitrone ("Clear Lemon Fanta") and was introduced in the United States under the current brand name Sprite in 1961 as a competitor to 7 Up.</p>
+                </section>
+            <!--</div>-->
+        </article>
+
+        <article>
+            <div class="fantatitle">
+                <h2>Fanta</h2>
+            </div>
+            <div class="fantasubtitle">
+                <h3>You think it's healthy but it's not</h3>
+            </div>
+            <!--<div class = fantatext>-->
+                <section>
+                    <h4>About fanta</h4>
+                    <p class="fantatext">Fanta is a brand of fruit-flavored carbonated soft drinks created by Coca-Cola Deutschland under the leadership of German businessman Max Keith. There are more than 200 flavors worldwide.</p>
+                </section>
+            <!--</div>-->
+        </article>
+
+        <!--Általános stílusosztály (osztály, mely nincs ráhúzva egy elemtípusra) segítségével oldjuk meg, hogy
+        különböző HTML elemek stílusa (szín, betűtípus-család, betű vastagsága, szöveg díszítése) ugyanaz
+        legyen. Alkalmazzuk ugyanazt a stílusosztályt az em és p elemekre. cssben implementalt class-->
+
+        <em class="newclass">“In our opinion, Coke is great from a can, still good from a bottle, 
+            yet hard to get just right from the fountain. But oh, when they do get it right, 
+            it tastes good enough to be an eighth wonder of the world.”</em>
+        <p class="newclass">- Alecia Whitaker, Wildflower</p>
+
+        <!--Definiáljunk egy olyan paragrafus stílust, mely be van keretezve széles, duplakerettel. A szöveg legyen
+        a keret közepén (ugyanolyan méretű behúzás–padding–legyen mindenütt). cssben implementalva-->
+        <p class="paragraphstyle">Statistics</p>
+
+        <div class="unorderedlistheader">
+            <section>
+                <h2>Countries that consume the most sodas</h2>
+            </section>
+        </div>
+        <!--Adjuk meg (kontextussal megadott szelektort használva) egy section elemben elhelyezkedő h2
+            elemet követő ul elem stílusát (szövegszín, lista stílusa: négyzetek jelenjenek meg a sor elején). cssben implementalva-->
+        <div class="unorderedlistrows">
+            <ul>
+                <li>country1</li>
+                <li>country2</li>
+                <li>country3</li>
+            </ul>
+        </div>
+
+        <div class="orderedlistheader">
+            <h2>Most commonly consumed sodas around the world</h2>
+        </div>
+        <div class="orderedlistrows">
+            <ol>
+                <li>soda1</li>
+                <li>soda2</li>
+                <li>soda3</li>
+            </ol>
+        </div>
+
+        <div class="tabletitle">
+            <h2>Sales table for the most popular sodas</h2>
+        </div>
+
+        <!--Definiáljuk a táblázat esetén a fejlécnek illetve a celláknak a stílusát. cssben implementalva-->
+        <div class="tablecontent">
+            <table>
+                    <tr>
+                        <th>Soda</th>
+                        <th>Country</th>
+                        <th>Sales</th>
+                    </tr>
+                    <tr>
+                        <td>soda1</td>
+                        <td>country1</td>
+                        <td>sales1</td>
+                    </tr>
+                    <tr>
+                        <td>soda2</td>
+                        <td>country2</td>
+                        <td>sales2</td>
+                    </tr>
+                    <tr>
+                        <td>soda3</td>
+                        <td>country3</td>
+                        <td>sales3</td>
+                    </tr>
+            </table>
+        </div>
+
+        <div class="imagezoom">
+            <label>
+                <input type="checkbox">
+                <img src="ukraineflag.png" alt="ukraineflag">
+            </label>
+        </div>
+
+        <!--Oldjuk meg -táblázat használata nélkül-, hogy egy képnek a jobb, illetve baloldalán is legyen szöveg. cssben implementalva-->
+        <div class="imgarea">
+            <img class="zoomer" src="orban.jpg" alt="orban"> <!-- style="width:100%; -->
+            <div class="left">
+                Jobbik a bal oldalon
+            </div>
+            <div class="right">
+                21st century hitler
+            </div>
+        </div>
+
+        <div id="footer">
+            <footer>
+                Ludasz Norbert 523/1 lnim2044
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

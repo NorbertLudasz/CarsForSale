@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reszletek</title>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <script src="/ajax.js" type="text/javascript">
+  
+    </script>
+  </head>
+  <body>
+    <div id="navbar">
+      <span><a href="/">Ads</a></span>
+    </div>
+
+    <h1>Selected Ad Details</h1>
+    <% if (hirdetesek.length) { %>
+
+        <% hirdetesek.forEach((hirdetes) => { %>
+          <table>
+            <tr><th>Brand</th><th>City</th><th>Price</th><th>Date of Posting</th></tr>
+            <tr>
+              <td><%= hirdetes.marka %></td>
+              <td><code><%= hirdetes.varos %></code></td>
+              <td><%= hirdetes.ar %></td>
+              <td><%= hirdetes.date %></td>
+            </tr>
+          </table>
+          <form name="imageuploadform" action="/uploadImage" method="POST" enctype="multipart/form-data">
+            <p>Upload Image</p>
+            <input type="number" name="feltoltesid" display="none" hidden id="feltoltesid" value="<%= hirdetes.id %>" required>
+            <label for = "feltoltesfoto">Photo:</label><input type="file" name="feltoltesfoto" id="feltoltesfoto" required>
+            <input type="submit" value="Upload" id="submit2">
+          </form>
+        <% }) %>
+
+    <% } else { %>
+      <p class="message">No ads to show</p>
+    <% } %>
+
+  <% if (images.length) { %>
+    <% images.forEach((kep) => { %>
+      <img id="keep/<%= kep.id %>" src="/uploadDir/<%= kep.nev %>" alt="<%= kep.nev %>">
+      <button id="photodelete/<%= kep.id %>" onclick="photoDel(<%= kep.id %>)">Delete</button>
+    <%}) %>
+  <% } else { %>
+    <p>No images to show</p>
+  <% } %>
+      
+  <div class="delphotomessage" id="delphotomessage"></div>
+
+    
+
+  </body>
+
+</html>

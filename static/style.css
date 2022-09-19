@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
+  background-size: cover;
+}
+
+code {
+  font-size: 125%;
+}
+
+.message {
+  font-style: italic;
+}
+
+#navbar > span {
+  display: inline-block;
+  width: 25%;
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+tr{
+  background: #f6f6f6;
+}
+
+tr:nth-of-type(odd){
+  background: #e9e9e9;
+}
+
+tr:first-of-type{
+  background: #f0cc05;
+}
